@@ -68,30 +68,27 @@
 <div class="login-container">
     <div class="logo-container">
         <h1>GrupoPCR</h1>
+        <img src="images/logo/1.png" alt="Panarenting">
         <div class="brand-logos">
-            <img src="https://via.placeholder.com/80x40?text=Panarenting" alt="Panarenting">
-            <img src="https://via.placeholder.com/80x40?text=dollar" alt="Dollar Rent a Car">
-            <img src="https://via.placeholder.com/80x40?text=Automarket" alt="Automarket">
-            <img src="https://via.placeholder.com/80x40?text=AutoService" alt="AutoService">
         </div>
     </div>
     
-    <form action="login.php" method="POST">
+    <form action="main.php" method="POST">
         <div class="form-group">
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="email" name="email" placeholder="Email">
         </div>
         <div class="form-group">
-            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password">
         </div>
         <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="rememberMe">
-            <label class="form-check-label text-small" for="rememberMe">Remember Me</label>
-            <a href="#" class="float-end text-small">Forgot Password?</a>
+            <!--<input type="checkbox" class="form-check-input" id="rememberMe">-->
+            <label class="form-check-label text-small" for="rememberMe"></label>
+            <a href="#" class="float-end text-small"></a>
         </div>
         <button type="submit" class="btn login-btn">Login</button>
     </form>
 
-    <p class="mt-3 text-small">Don't have an account? <a href="#">Create an account</a></p>
+    <p class="mt-3 text-small"><a href="#"></a></p>
 </div>
 
 <!-- Bootstrap JS desde CDN -->

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0d6efd">
-    <title>Mi PWA</title>
+    <title>APP PCR</title>
     <!-- Bootstrap CSS desde CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
@@ -21,13 +21,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="main.php">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Servicios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Salir</a>
                     </li>
                 </ul>
             </div>

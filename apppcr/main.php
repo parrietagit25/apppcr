@@ -2,9 +2,9 @@
 
 <div class="container mt-4">
     <div class="text-center mb-4">
-        <img src="https://via.placeholder.com/80" alt="User Avatar" class="rounded-circle" width="80">
+        <img src="images/user.png" alt="User Avatar" class="rounded-circle" width="80">
         <h4>Bienvenido</h4>
-        <p>Cesar Asprilla</p>
+        <p>Usuario PCR</p>
     </div>
 
     <div class="input-group mb-3">
@@ -29,9 +29,9 @@
     <!-- Iconos de funcionalidades -->
     <div class="row text-center mb-4">
         <div class="col-4">
-            <a href="#" class="text-decoration-none">
+            <a href="rrhh.php" class="text-decoration-none">
                 <div class="p-2">
-                    <img src="https://via.placeholder.com/50" alt="RRHH" class="mb-2">
+                    <img src="images/rrhh.png" alt="RRHH" class="mb-2" width="50">
                     <p>RRHH</p>
                 </div>
             </a>
@@ -39,7 +39,7 @@
         <div class="col-4">
             <a href="#" class="text-decoration-none">
                 <div class="p-2">
-                    <img src="https://via.placeholder.com/50" alt="Beneficios" class="mb-2">
+                    <img src="images/beneficios.png" alt="Beneficios" class="mb-2" width="50">
                     <p>Beneficios</p>
                 </div>
             </a>
@@ -47,7 +47,7 @@
         <div class="col-4">
             <a href="#" class="text-decoration-none">
                 <div class="p-2">
-                    <img src="https://via.placeholder.com/50" alt="Servicios" class="mb-2">
+                    <img src="images/servicios.png" alt="Servicios" class="mb-2" width="50">
                     <p>Servicios</p>
                 </div>
             </a>
@@ -55,7 +55,7 @@
         <div class="col-4">
             <a href="#" class="text-decoration-none">
                 <div class="p-2">
-                    <img src="https://via.placeholder.com/50" alt="Noticias" class="mb-2">
+                    <img src="images/notocias.png" alt="Noticias" class="mb-2" width="50">
                     <p>Noticias</p>
                 </div>
             </a>
@@ -63,15 +63,7 @@
         <div class="col-4">
             <a href="#" class="text-decoration-none">
                 <div class="p-2">
-                    <img src="https://via.placeholder.com/50" alt="FMV" class="mb-2">
-                    <p>FMV</p>
-                </div>
-            </a>
-        </div>
-        <div class="col-4">
-            <a href="#" class="text-decoration-none">
-                <div class="p-2">
-                    <img src="https://via.placeholder.com/50" alt="Cumpleaños" class="mb-2">
+                    <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
                     <p>Cumpleaños del mes</p>
                 </div>
             </a>
@@ -82,7 +74,7 @@
     <div class="bg-light p-3 rounded">
         <h5 class="fw-bold">Top Beneficios</h5>
         <div class="d-flex">
-            <img src="https://via.placeholder.com/100x60" alt="Playa Blanca Resort" class="me-3">
+            <img src="images/playablanca.jpg" alt="Playa Blanca Resort" class="me-3" width="100">
             <div>
                 <p class="mb-0">Playa Blanca Resort</p>
                 <small class="text-muted">Descuento del 7% de la tarifa</small>
