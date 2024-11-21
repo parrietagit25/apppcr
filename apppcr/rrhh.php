@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if (!isset($_SESSION['code'])) {
+    header("Location: salir.php");
+    exit();
+}
+?>
 <?php include 'templates/header.php'; ?>
 
 <div class="container mt-4">
@@ -8,7 +15,7 @@
             <i class="bi bi-search"></i>
         </button>
     </div>
-
+    <?php /*
     <!-- Slider con frase -->
     <div id="carouselExampleSlidesOnly" class="carousel slide mb-4" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -54,7 +61,7 @@
                 </div>
             </a>
         </div>
-    </div>
+    </div> */ ?>
 
     <div id="carouselExampleSlidesOnly" class="carousel slide mb-4" data-bs-ride="carousel">
         <div class="carousel-inner">

@@ -1,3 +1,33 @@
+<?php 
+session_start();
+if (!isset($_SESSION['code'])) {
+    header("Location: salir.php");
+    exit();
+}
+
+$host = 'localhost'; 
+$dbname = 'apppcr'; 
+$username = 'root'; 
+$password = ''; 
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Error en la conexión a la base de datos: " . $e->getMessage());
+}
+
+$code = $_SESSION['code'];
+$stmt = $pdo->prepare("SELECT dias_pendientes FROM col_vacaciones WHERE codigo = :code");
+$stmt->bindParam(':code', $code, PDO::PARAM_INT);
+$stmt->execute();
+
+while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $dias_pendientes = $list_code['dias_pendientes'];
+}
+
+
+?>
 <?php include 'templates/header.php'; ?>
 
 <div class="container mt-4">
@@ -24,7 +54,7 @@
 
         <?php if (isset($_GET['id']) && $_GET['id'] == 2) { ?>
           
-            <b>El total de vacaciones acumuladas hasta hoy son: 32 Dias</b>
+            <b>El total de vacaciones acumuladas hasta hoy son: <br> <?php echo $dias_pendientes; ?> Dias</b>
 
         <?php }else{ ?>
 

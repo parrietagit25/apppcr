@@ -1,10 +1,39 @@
+<?php 
+session_start();
+if (!isset($_SESSION['code'])) {
+    header("Location: salir.php");
+    exit();
+}
+
+$host = 'localhost'; 
+$dbname = 'apppcr'; 
+$username = 'root'; 
+$password = ''; 
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Error en la conexión a la base de datos: " . $e->getMessage());
+}
+
+$code = $_SESSION['code'];
+$stmt = $pdo->prepare("SELECT nombre FROM col_vacaciones WHERE codigo = :code");
+$stmt->bindParam(':code', $code, PDO::PARAM_INT);
+$stmt->execute();
+
+while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    $nombre = $list_code['nombre'];
+}
+
+?>
 <?php include 'templates/header.php'; ?>
 
 <div class="container mt-4">
     <div class="text-center mb-4">
         <img src="images/user.png" alt="User Avatar" class="rounded-circle" width="80">
         <h4>Bienvenido</h4>
-        <p>Usuario PCR</p>
+        <p><b><?php echo $nombre; ?></b></p>
     </div>
 
     <div class="input-group mb-3">
@@ -20,7 +49,7 @@
             <div class="carousel-item active">
                 <div class="p-3 bg-light rounded">
                     <h5 class="fw-bold">Frase de la semana</h5>
-                    <p class="mb-0">"La rentabilidad comienza con la conciencia: ahorremos energía y multipliquemos nuestros <strong>resultados</strong>."</p>
+                    <p class="mb-0">"Planificar tus finanzas es el primer paso para lograr la libertad <strong>financiera.</strong>."</p>
                 </div>
             </div>
         </div>
@@ -61,7 +90,7 @@
             </a>
         </div>
         <div class="col-4">
-            <a href="#" class="text-decoration-none">
+            <a href="cumple.php" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
                     <p>Cumpleaños del mes</p>
