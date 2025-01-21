@@ -11,7 +11,7 @@ include 'templates/header.php';
 $host = 'localhost'; 
 $dbname = 'apppcr'; 
 $username = 'root'; 
-$password = ''; 
+$password = 'elchamo1787$$$'; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
@@ -79,93 +79,21 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     echo 'Fecha de ingreso: <b> '.$fecha_ingreso.' </b> <br>';
                     echo 'Ultimo Pago: <b> '.$ultimo_pago.' </b> <br>';
 
-         }else{ ?>
-            
-        <h4>Mis datos</h4>
-        <table class="table table-bordered table-striped">
-            <thead class="table-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Código</th>
-                    <th>Nombre</th>
-                    <th>Género</th>
-                    <th>Departamento</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2</td>
-                    <td>001744</td>
-                    <td>GISELA, CHAMORRO</td>
-                    <td>Femenino</td>
-                    <td>ADMINISTRACION</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>002418</td>
-                    <td>OMAYRA, CRUZ</td>
-                    <td>Femenino</td>
-                    <td>ADMINISTRACION</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>002450</td>
-                    <td>YISARA ELIZABETH, CACERES</td>
-                    <td>Femenino</td>
-                    <td>ADMINISTRACION</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>002481</td>
-                    <td>JOSELIN TARINA, URRIOLA HERRERA</td>
-                    <td>Femenino</td>
-                    <td>ADMINISTRACION</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>HP001</td>
-                    <td>CLAUDIA COULSON</td>
-                    <td>Masculino</td>
-                    <td>ADMINISTRACION</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>001207</td>
-                    <td>YAMILETH ESTELA, RODRIGUEZ</td>
-                    <td>Femenino</td>
-                    <td>ADMINISTRACION</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>002321</td>
-                    <td>OMAR, CARRILLO ORO</td>
-                    <td>Masculino</td>
-                    <td>ADMINISTRACION</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>001082</td>
-                    <td>JORGE JUAN, DE LA GUARDIA</td>
-                    <td>Masculino</td>
-                    <td>ADMINISTRACION</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>001232</td>
-                    <td>GABRIEL, JURADO</td>
-                    <td>Masculino</td>
-                    <td>ADMINISTRACION</td>
-                </tr>
-            </tbody>
-        </table>
-
-
-        <?php } ?>
+         } ?> 
+         
     </div>
     
 </div>
 
 <br>
 
+<nav class="navbar fixed-bottom navbar-light bg-light border-top">
+    <div class="container-fluid">
+        <a href="main.php" class="navbar-brand text-center" style="width: 25%;">INICIO</a>
+        <a href="#" class="navbar-brand text-center" style="width: 25%;"></a>
+        <a href="rrhh.php" class="navbar-brand text-center" style="width: 25%;">VOLVER</a>
+        <a href="#" class="navbar-brand text-center" style="width: 25%;"></a>
+    </div>
+</nav>
 
 <?php include 'templates/footer.php'; ?>

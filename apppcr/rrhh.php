@@ -136,5 +136,12 @@ if (!isset($_SESSION['code'])) {
         <a href="#" class="navbar-brand text-center" style="width: 25%;">Perfil</a>
     </div>
 </nav> -->
-
+<nav class="navbar fixed-bottom navbar-light bg-light border-top">
+    <div class="container-fluid">
+        <a href="main.php" class="navbar-brand text-center" style="width: 25%;">INICIO</a>
+        <a href="#" class="navbar-brand text-center" style="width: 25%;"></a>
+        <a href="main.php" class="navbar-brand text-center" style="width: 25%;">VOLVER</a>
+        <a href="#" class="navbar-brand text-center" style="width: 25%;"></a>
+    </div>
+</nav>
 <?php include 'templates/footer.php'; ?>

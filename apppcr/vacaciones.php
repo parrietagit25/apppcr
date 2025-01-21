@@ -8,7 +8,7 @@ if (!isset($_SESSION['code'])) {
 $host = 'localhost'; 
 $dbname = 'apppcr'; 
 $username = 'root'; 
-$password = ''; 
+$password = 'elchamo1787$$$'; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
@@ -18,12 +18,15 @@ try {
 }
 
 $code = $_SESSION['code'];
-$stmt = $pdo->prepare("SELECT dias_pendientes FROM col_vacaciones WHERE codigo = :code");
+$stmt = $pdo->prepare("SELECT * FROM col_vacaciones WHERE codigo = :code");
 $stmt->bindParam(':code', $code, PDO::PARAM_INT);
 $stmt->execute();
 
 while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $dias_pendientes = $list_code['dias_pendientes'];
+    $fecha_ingreso = $list_code['fecha_ingreso'];
+    $proximas_vac = $list_code['proximas_vac'];
+    $vac_pag_hasta = $list_code['vac_pag_hasta'];
 }
 
 
@@ -54,7 +57,10 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
         <?php if (isset($_GET['id']) && $_GET['id'] == 2) { ?>
           
-            <b>El total de vacaciones acumuladas hasta hoy son: <br> <?php echo $dias_pendientes; ?> Dias</b>
+            <p>Vacaciones Acumuladas: <b><?php echo $dias_pendientes; ?></b> Días</p>
+            <p>Fecha de Ingreso: <b><?php echo $fecha_ingreso; ?></b></p>
+            <p>Próximas Vacaciones: <b><?php echo $proximas_vac; ?></b></p>
+            <p>Vacaciones pagadas hasta: <b><?php echo $vac_pag_hasta; ?></b></p>
 
         <?php }else{ ?>
 
@@ -91,5 +97,14 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <br>
 <br>
 <br><br><br><br>
+
+<nav class="navbar fixed-bottom navbar-light bg-light border-top">
+    <div class="container-fluid">
+        <a href="main.php" class="navbar-brand text-center" style="width: 25%;">INICIO</a>
+        <a href="#" class="navbar-brand text-center" style="width: 25%;"></a>
+        <a href="rrhh.php" class="navbar-brand text-center" style="width: 25%;">VOLVER</a>
+        <a href="#" class="navbar-brand text-center" style="width: 25%;"></a>
+    </div>
+</nav>
 
 <?php include 'templates/footer.php'; ?>

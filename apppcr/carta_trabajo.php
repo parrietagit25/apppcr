@@ -24,11 +24,13 @@
 
         <?php if (isset($_GET['id']) && $_GET['id'] == 2) { ?>
           
-            <p>Presiones el Boton para generar la carta de trabajo o enviarla por correo</p>
+            <p>Ingrese la persona o entidad al cual ira dirigida la carta de trabajo</p>
+            <br>
+            <textarea name="" id="" class="form-control" style="margin:10px;"></textarea>
+            <br>
             <br>
             <input type="submit" class="btn btn-primary" value="Generar Carta">
-            <br>
-            <input type="submit" class="btn btn-success" value="Enviar por correo" style="margin-top:10px;">
+            
 
 
         <?php }else{ ?>
@@ -66,5 +68,14 @@
 <br>
 <br>
 <br><br><br><br>
+
+<nav class="navbar fixed-bottom navbar-light bg-light border-top">
+    <div class="container-fluid">
+        <a href="main.php" class="navbar-brand text-center" style="width: 25%;">INICIO</a>
+        <a href="#" class="navbar-brand text-center" style="width: 25%;"></a>
+        <a href="rrhh.php" class="navbar-brand text-center" style="width: 25%;">VOLVER</a>
+        <a href="#" class="navbar-brand text-center" style="width: 25%;"></a>
+    </div>
+</nav>
 
 <?php include 'templates/footer.php'; ?>

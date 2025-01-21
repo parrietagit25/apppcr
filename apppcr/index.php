@@ -5,7 +5,7 @@ session_start(); // Iniciar la sesión
 $host = 'localhost'; // Cambiar según sea necesario
 $dbname = 'apppcr'; // Nombre de tu base de datos
 $username = 'root'; // Usuario de la base de datos
-$password = ''; // Contraseña de la base de datos
+$password = 'elchamo1787$$$'; // Contraseña de la base de datos
 
 // Crear la conexión PDO
 try {

@@ -11,7 +11,7 @@ include 'templates/header.php';
 $host = 'localhost'; 
 $dbname = 'apppcr'; 
 $username = 'root'; 
-$password = ''; 
+$password = 'elchamo1787$$$'; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
@@ -82,6 +82,14 @@ $cumpleanos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
 </div>
 
-<br>
+
+<nav class="navbar fixed-bottom navbar-light bg-light border-top">
+    <div class="container-fluid">
+        <a href="main.php" class="navbar-brand text-center" style="width: 25%;">INICIO</a>
+        <a href="#" class="navbar-brand text-center" style="width: 25%;"></a>
+        <a href="main.php" class="navbar-brand text-center" style="width: 25%;">VOLVER</a>
+        <a href="#" class="navbar-brand text-center" style="width: 25%;"></a>
+    </div>
+</nav>
 
 <?php include 'templates/footer.php'; ?>

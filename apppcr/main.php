@@ -8,7 +8,7 @@ if (!isset($_SESSION['code'])) {
 $host = 'localhost'; 
 $dbname = 'apppcr'; 
 $username = 'root'; 
-$password = ''; 
+$password = 'elchamo1787$$$'; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
@@ -66,7 +66,7 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
             </a>
         </div>
         <div class="col-4">
-            <a href="#" class="text-decoration-none">
+            <a href="https://pcrgrupo.sharepoint.com/sites/PanamaCarRental/SitePages/CONOCE-LOS-BENEFICIOS.aspx?xsdata=MDV8MDJ8fDhiMDM3MjA0YTk4MTRjMWVlMzJiMDhkZDBhMmRiMmIxfGQzNDc5NzI4MDM4ZDQ5ODY4NTgzMGJjYWE4OTk5NTY5fDB8MHw2Mzg2Nzc5MTM1NDQyODcwMTl8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxMMk5vWVhSekx6RTVPakF4T1RnMlpESXlMVGsxT1RrdE5EWTFZeTA0T0RGakxUUmpPREUxTkRrMFpqZ3lZVjlsWm1Vd01HUmhPQzAyTVdRMExUUTBNR0V0WVdOaFppMHdZVE00TTJZMk5UVmxZbUZBZFc1eExtZGliQzV6Y0dGalpYTXZiV1Z6YzJGblpYTXZNVGN6TWpFNU5EVTFNekEzTWc9PXwyOGNkNTdmNzFiN2E0OTIxZTMyYjA4ZGQwYTJkYjJiMXwzOWU3YjQxOWEzODk0ZjIwOGFjNWQyMDU2N2YxMjEwZQ%3D%3D&sdata=c3hSbGRoTk44Wnk3UnZEZSt0R3lPUjNVZmNPL3kzREx5eUlwcjdSVmlCZz0%3D&ovuser=d3479728-038d-4986-8583-0bcaa8999569%2Cpedro.arrieta%40grupopcr.com.pa&OR=Teams-HL&CT=1732234125670&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDEwMjAwMTMxOCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D" target="_blank" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/beneficios.png" alt="Beneficios" class="mb-2" width="50">
                     <p>Beneficios</p>
@@ -74,21 +74,21 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
             </a>
         </div>
         <div class="col-4">
-            <a href="#" class="text-decoration-none">
+            <a href="carnet.php" class="text-decoration-none">
                 <div class="p-2">
-                    <img src="images/servicios.png" alt="Servicios" class="mb-2" width="50">
-                    <p>Servicios</p>
+                    <img src="images/carnet.png" alt="Servicios" class="mb-2" width="50">
+                    <p>Carnet</p>
                 </div>
             </a>
         </div>
-        <div class="col-4">
+        <!-- <div class="col-4">
             <a href="#" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/notocias.png" alt="Noticias" class="mb-2" width="50">
                     <p>Noticias</p>
                 </div>
             </a>
-        </div>
+        </div> -->
         <div class="col-4">
             <a href="cumple.php" class="text-decoration-none">
                 <div class="p-2">
@@ -116,14 +116,10 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
     </div>
 </div>
 
-<!-- Footer navigation -->
-<nav class="navbar fixed-bottom navbar-light bg-light border-top">
-    <div class="container-fluid">
-        <a href="#" class="navbar-brand text-center" style="width: 25%;">Inicio</a>
-        <a href="#" class="navbar-brand text-center" style="width: 25%;">Mensajes</a>
-        <a href="#" class="navbar-brand text-center" style="width: 25%;">Eventos</a>
-        <a href="#" class="navbar-brand text-center" style="width: 25%;">Perfil</a>
+<footer class="bg-light text-center text-lg-start mt-5">
+    <div class="container p-4">
+        <p>&copy; 2024 GrupoPCR. Todos los derechos reservados.</p>
     </div>
-</nav>
+</footer>
 
 <?php include 'templates/footer.php'; ?>
