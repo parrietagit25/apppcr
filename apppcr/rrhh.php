@@ -106,6 +106,55 @@ if (!isset($_SESSION['code'])) {
                 </div>
             </a>
         </div>
+        <div class="col-4">
+            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
+                    <p>Ficha</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
+                    <p>Pagos</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
+                    <p>Carta de Trabajo</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
+                    <p>Incapacidades</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
+                    <p>RRHH consulta</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
+                    <p>Vacantes</p>
+                </div>
+            </a>
+        </div>
+
     </div>
 
     <!-- Top beneficios 

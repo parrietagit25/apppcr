@@ -8,7 +8,9 @@ if (!isset($_SESSION['code'])) {
 $host = 'localhost'; 
 $dbname = 'apppcr'; 
 $username = 'root'; 
-$password = 'elchamo1787$$$'; 
+//$password = 'elchamo1787$$$'; 
+$password = ''; 
+
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
@@ -94,6 +96,46 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 <div class="p-2">
                     <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
                     <p>Cumpleaños del mes</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="cumple.php" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
+                    <p>Correo Electronico</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="cumple.php" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
+                    <p>Linea de apoyo</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="cumple.php" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
+                    <p>Operativa de la empresa</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="cumple.php" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
+                    <p>Crecimiento interno</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="cumple.php" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
+                    <p>Evaluacion de desempeño</p>
                 </div>
             </a>
         </div>
