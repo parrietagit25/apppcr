@@ -90,22 +90,14 @@ if (!isset($_SESSION['code'])) {
                 </div>
             </a>
         </div>
-        <div class="col-4">
+        <!--<div class="col-4">
             <a href="solicitudes.php?id=2" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/solicitud.png" alt="Servicios" class="mb-2" width="50">
                     <p>Mis Solicitudes</p>
                 </div>
             </a>
-        </div>
-        <div class="col-4">
-            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
-                <div class="p-2">
-                    <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
-                    <p>Carta de Trabajo</p>
-                </div>
-            </a>
-        </div>
+        </div>-->
         <div class="col-4">
             <a href="carta_trabajo.php?id=2" class="text-decoration-none">
                 <div class="p-2">
@@ -123,10 +115,18 @@ if (!isset($_SESSION['code'])) {
             </a>
         </div>
         <div class="col-4">
-            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
+            <a href="carta_trabajo.php" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
                     <p>Carta de Trabajo</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-4">
+            <a href="carta_trabajo_aprobar.php" class="text-decoration-none">
+                <div class="p-2">
+                    <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
+                    <p>V-RRHH Carta de Trabajo</p>
                 </div>
             </a>
         </div>

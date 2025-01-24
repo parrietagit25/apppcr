@@ -1,3 +1,50 @@
+<?php
+session_start();
+$servername = "localhost"; 
+$username = "root";        
+$password = "";            
+$dbname = "apppcr"; 
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
+
+// Insertar nueva solicitud
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['carta_trabajo'])) {
+    
+    $descripcion = $conn->real_escape_string($_POST['descripcion']);
+    $code_user = $_SESSION['code']; 
+    $stat = 1;            
+    $file_add = "";       
+    $id_user_aprobado = 0; 
+
+    $sql = "INSERT INTO carta_trabajo (code_user, descripcion, fecha_log, stat, file_add, id_user_aprobado) 
+            VALUES ('$code_user', '$descripcion', CURRENT_TIMESTAMP(), $stat, '$file_add', $id_user_aprobado)";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<div class='alert alert-success'>Carta solicitada correctamente.</div>";
+    } else {
+        echo "<div class='alert alert-danger'>Error al generar la carta: " . $conn->error . "</div>";
+    }
+}
+
+// Consultar las solicitudes del usuario actual
+$code_user = $_SESSION['code'];
+$sql = "SELECT id, descripcion, fecha_log, 
+        CASE stat
+            WHEN 1 THEN 'Solicitado'
+            WHEN 2 THEN 'Aprobado'
+            WHEN 3 THEN 'Borrado'
+        END AS estado, 
+        file_add
+        FROM carta_trabajo
+        WHERE code_user = '$code_user'";
+
+$result = $conn->query($sql);
+?>
+
 <?php include 'templates/header.php'; ?>
 
 <div class="container mt-4">
@@ -20,48 +67,56 @@
         </div>
     </div>
 
+    <!-- Formulario para generar carta -->
     <div class="row text-center mb-4">
+        <form action="" method="POST">
+            <p>Ingrese la persona o entidad al cual irá dirigida la carta de trabajo</p>
+            <textarea name="descripcion" class="form-control" style="margin:10px;"></textarea>
+            <br><br>
+            <input type="submit" class="btn btn-primary" value="Solicitar Carta" name="carta_trabajo">
+        </form>
+    </div>
 
-        <?php if (isset($_GET['id']) && $_GET['id'] == 2) { ?>
-          
-            <p>Ingrese la persona o entidad al cual ira dirigida la carta de trabajo</p>
-            <br>
-            <textarea name="" id="" class="form-control" style="margin:10px;"></textarea>
-            <br>
-            <br>
-            <input type="submit" class="btn btn-primary" value="Generar Carta">
-            
+    <!-- Tabla de solicitudes -->
+    <div class="row mt-5">
+        <h5 class="text-center">Solicitudes de Cartas de Trabajo</h5>
+        <table class="table table-striped table-bordered mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>Carta</th>
+                    <th>Descripción</th>
+                    <th>Fecha de Solicitud</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
 
+                        if ($row['file_add'] != '') {
+                            $link = '<a href="'.$row['file_add'].'" target="_blank">Carta</a>';
+                        }else{
+                            $link = '';
+                        }
 
-        <?php }else{ ?>
-
-            <p>Seleccione un colaborador y luego Presiones el Boton para generar la carta de trabajo o enviarla por correo</p>
-            <br>
-            <select class="form-select" id="nombreSelect" name="nombre">
-                    <option selected disabled>Seleccione un colaborador</option>
-                    <option value="1">GISELA, CHAMORRO</option>
-                    <option value="2">OMAYRA, CRUZ</option>
-                    <option value="3">YISARA ELIZABETH, CACERES</option>
-                    <option value="4">JOSELIN TARINA, URRIOLA HERRERA</option>
-                    <option value="5">CLAUDIA COULSON</option>
-                    <option value="6">YAMILETH ESTELA, RODRIGUEZ</option>
-                    <option value="7">OMAR, CARRILLO ORO</option>
-                    <option value="8">JORGE JUAN, DE LA GUARDIA</option>
-                    <option value="9">GABRIEL, JURADO</option>
-                </select>
-            <br>
-            <input type="submit" class="btn btn-primary" value="Generar Carta" style="margin-top:20px;">
-            <br>
-            <input type="submit" class="btn btn-success" value="Enviar por correo" style="margin-top:10px;">
-
-        <?php } ?>
-        
+                        echo "<tr>
+                                <td>{$link}</td>
+                                <td>{$row['descripcion']}</td>
+                                <td>{$row['fecha_log']}</td>
+                                <td>{$row['estado']}</td>
+                              </tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='4' class='text-center'>No hay solicitudes registradas.</td></tr>";
+                }
+                ?>
+            </tbody>
+        </table>
     </div>
     
 </div>
 
-<br>
-<br>
 <br>
 <br>
 <br>
@@ -78,4 +133,7 @@
     </div>
 </nav>
 
-<?php include 'templates/footer.php'; ?>
+<?php 
+$conn->close(); 
+include 'templates/footer.php'; 
+?>

@@ -100,7 +100,7 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
             </a>
         </div>
         <div class="col-4">
-            <a href="cumple.php" class="text-decoration-none">
+            <a href="ms-outlook://" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
                     <p>Correo Electronico</p>
@@ -108,7 +108,7 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
             </a>
         </div>
         <div class="col-4">
-            <a href="cumple.php" class="text-decoration-none">
+            <a href="tel:+1234567890" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
                     <p>Linea de apoyo</p>
