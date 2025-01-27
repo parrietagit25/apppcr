@@ -8,8 +8,8 @@ if (!isset($_SESSION['code'])) {
 $host = 'localhost'; 
 $dbname = 'apppcr'; 
 $username = 'root'; 
-//$password = 'elchamo1787$$$'; 
-$password = ''; 
+$password = 'elchamo1787$$$'; 
+//$password = ''; 
 
 
 try {

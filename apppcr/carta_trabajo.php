@@ -2,7 +2,8 @@
 session_start();
 $servername = "localhost"; 
 $username = "root";        
-$password = "";            
+//$password = "";
+$password = 'elchamo1787$$$';            
 $dbname = "apppcr"; 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
