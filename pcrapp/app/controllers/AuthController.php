@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($code) && !empty($password)) {
         if ($userModel->authenticate($code, $password)) {
             $_SESSION['code'] = $code;
-            header('Location: /public/main.php');
+            require_once __DIR__ . '/../views/main.php';
             exit();
         } else {
             $error = "Código o contraseña incorrectos.";
