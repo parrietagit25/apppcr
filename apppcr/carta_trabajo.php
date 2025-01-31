@@ -78,6 +78,7 @@ $result = $conn->query($sql);
         </form>
     </div>
 
+<<<<<<< HEAD
     <!-- Tabla de solicitudes -->
     <div class="row mt-5">
         <h5 class="text-center">Solicitudes de Cartas de Trabajo</h5>
@@ -94,6 +95,15 @@ $result = $conn->query($sql);
                 <?php
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
+=======
+        <?php if (isset($_GET['id']) && $_GET['id'] == 2) { ?>
+          
+            <p>Ingrese la persona o entidad al cual ira dirigida la carta de trabajo</p>
+            <br>
+            <textarea name="" id="" class="form-control"></textarea>
+            <br>
+            <input type="submit" class="btn btn-primary" value="Generar Carta">
+>>>>>>> 0cf9032 (cambios)
 
                         if ($row['file_add'] != '') {
                             $link = '<a href="'.$row['file_add'].'" target="_blank">Carta</a>';
