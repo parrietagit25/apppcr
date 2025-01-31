@@ -13,9 +13,12 @@ if ($conn->connect_error) {
 }
 
 // Insertar nueva solicitud
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['carta_trabajo'])) {
     
     $descripcion = $conn->real_escape_string($_POST['descripcion']);
+    $_SESSION['code'] = ltrim($_SESSION['code'], '0');
     $code_user = $_SESSION['code']; 
     $stat = 1;            
     $file_add = "";       
@@ -32,7 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['carta_trabajo'])) {
 }
 
 // Consultar las solicitudes del usuario actual
-$code_user = $_SESSION['code'];
+$_SESSION['code'] = ltrim($_SESSION['code'], '0');
+$code_user = $_SESSION['code']; 
 $sql = "SELECT id, descripcion, fecha_log, 
         CASE stat
             WHEN 1 THEN 'Solicitado'

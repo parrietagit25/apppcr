@@ -116,7 +116,7 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
             </a>
         </div>
         <div class="col-4">
-            <a href="cumple.php" class="text-decoration-none">
+            <a href="#" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
                     <p>Operativa de la empresa</p>
@@ -124,7 +124,7 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
             </a>
         </div>
         <div class="col-4">
-            <a href="cumple.php" class="text-decoration-none">
+            <a href="#" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
                     <p>Crecimiento interno</p>
@@ -132,7 +132,7 @@ while ($list_code = $stmt->fetch(PDO::FETCH_ASSOC)) {
             </a>
         </div>
         <div class="col-4">
-            <a href="cumple.php" class="text-decoration-none">
+            <a href="#" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/hb.png" alt="Cumpleaños" class="mb-2" width="50">
                     <p>Evaluacion de desempeño</p>
