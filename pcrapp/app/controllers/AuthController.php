@@ -13,7 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($code) && !empty($password)) {
         if ($userModel->authenticate($code, $password)) {
             $_SESSION['code'] = $code;
+<<<<<<< HEAD
             header('Location: /pcrapp/public/main.php');
+=======
+            require_once __DIR__ . '/../views/main.php';
+>>>>>>> 20e29a6bb86278b5d1c3e9290f1cbe5a8ea94f9a
             exit();
         } else {
             $error = "Código o contraseña incorrectos.";

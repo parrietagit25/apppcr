@@ -1,4 +1,8 @@
 <?php
+
+// Cargar Configuración Global
+require_once __DIR__ . '/../../config/config.php';
+
 // Bootstrap.php - Inicializa la aplicación cargando los archivos principales
 
 require_once __DIR__ . '/Database.php'; // Cargar la conexión a la base de datos

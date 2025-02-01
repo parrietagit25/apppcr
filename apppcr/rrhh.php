@@ -99,7 +99,7 @@ if (!isset($_SESSION['code'])) {
             </a>
         </div>-->
         <div class="col-4">
-            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
+            <a href="#" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
                     <p>Ficha</p>
@@ -107,7 +107,7 @@ if (!isset($_SESSION['code'])) {
             </a>
         </div>
         <div class="col-4">
-            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
+            <a href="#" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
                     <p>Pagos</p>
@@ -139,7 +139,7 @@ if (!isset($_SESSION['code'])) {
             </a>
         </div>
         <div class="col-4">
-            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
+            <a href="#" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
                     <p>RRHH consulta</p>
@@ -147,7 +147,7 @@ if (!isset($_SESSION['code'])) {
             </a>
         </div>
         <div class="col-4">
-            <a href="carta_trabajo.php?id=2" class="text-decoration-none">
+            <a href="#" class="text-decoration-none">
                 <div class="p-2">
                     <img src="images/carta.png" alt="Noticias" class="mb-2" width="50">
                     <p>Vacantes</p>

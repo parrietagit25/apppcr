@@ -35,8 +35,8 @@
 </head>
 <body>
 <div class="login-container">
-    <img src="images/logo/1.png" alt="" width="300">
-    <form action="/app/controllers/AuthController.php" method="POST">
+    <img src="<?php echo BASE_URL; ?>/images/logo/1.png" alt="" width="300">
+    <form action="" method="POST">
         <div class="form-group">
             <input type="text" name="code" placeholder="Código de Colaborador" class="form-control">
         </div>
